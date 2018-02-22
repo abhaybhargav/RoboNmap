@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 install_dependencies = (
     'python-libnmap==0.7.0',
@@ -14,5 +14,9 @@ setup(
     license='MIT License',
     author='Abhay Bhargav',
     author_email='Twitter: @abhaybhargav',
+    install_requires = [
+    'python-libnmap==0.7.0',
+    'robotframework==3.0.2'
+    ],
     description=''
 )
