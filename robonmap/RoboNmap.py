@@ -20,7 +20,7 @@ class RoboNmap(object):
         | nmap default scan  | target |
         '''
         target = str(target)
-        nmproc = NmapProcess(target, '-Pn -sS -sV')
+        nmproc = NmapProcess(target)
         rc = nmproc.run()
         if rc != 0:
             raise Exception('EXCEPTION: nmap scan failed: {0}'.format(nmproc.stderr))
