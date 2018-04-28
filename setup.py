@@ -2,7 +2,7 @@ from setuptools import setup
 
 install_dependencies = (
     'python-libnmap==0.7.0',
-    'robotframework==3.0.2'
+    'robotframework==3.0.4'
 )
 
 setup(
@@ -16,7 +16,7 @@ setup(
     author_email='Twitter: @abhaybhargav',
     install_requires = [
     'python-libnmap==0.7.0',
-    'robotframework==3.0.2'
+    'robotframework==3.0.4'
     ],
     description=''
 )
