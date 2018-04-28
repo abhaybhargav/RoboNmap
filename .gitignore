@@ -2,4 +2,7 @@
 robonmap/*.html
 robonmap/{}
 robonmap/*.xml
-
+dist/
+.pypirc
+robonmap/README.md
+robonmap/RoboNmap.egg-info/
