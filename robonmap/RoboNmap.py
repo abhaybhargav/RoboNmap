@@ -27,7 +27,7 @@ class RoboNmap(object):
         if file_export == None:
             nmproc = NmapProcess(target)
         else:
-            nmproc = NmapProcess(target, '-oN {0}'.format(file_export))
+            nmproc = NmapProcess(target, '-oN {0}'.format(file_export), safe_mode=False)
         rc = nmproc.run()
         if rc != 0:
             raise Exception('EXCEPTION: nmap scan failed: {0}'.format(nmproc.stderr))
@@ -52,7 +52,7 @@ class RoboNmap(object):
             nmproc = NmapProcess(target, '-p1-65535 -sV')
         else:
             cmd = '-p1-65535 -sV -oN {0}'.format(file_export)
-            nmproc = NmapProcess(target, cmd)
+            nmproc = NmapProcess(target, cmd, safe_mode=False)
         rc = nmproc.run()
         if rc != 0:
             raise Exception('EXCEPTION: nmap scan failed: {0}'.format(nmproc.stderr))
@@ -79,7 +79,7 @@ class RoboNmap(object):
             nmproc = NmapProcess(target, '-p1-65535 -sV')
         else:
             cmd = '-sU -sV -p {0} -oN {1}'.format(portlist, file_export)
-            nmproc = NmapProcess(target, cmd)
+            nmproc = NmapProcess(target, cmd, safe_mode=False)
         rc = nmproc.run()
         if rc != 0:
             raise Exception('EXCEPTION: nmap scan failed: {0}'.format(nmproc.stderr))
@@ -112,7 +112,7 @@ class RoboNmap(object):
         if file_export:
             nmap_proc_cmd += " -oN {0}".format(file_export)
 
-        nmproc = NmapProcess(target, nmap_proc_cmd)
+        nmproc = NmapProcess(target, nmap_proc_cmd, safe_mode=False)
         rc = nmproc.run()
         if rc != 0:
             raise Exception('EXCEPTION: nmap scan failed: {0}'.format(nmproc.stderr))
@@ -148,9 +148,9 @@ class RoboNmap(object):
             nmap_proc_cmd = "-Pn -sV --version-intensity {0} -sC".format(version_intense)
 
         if file_export:
-            nmap_proc_cmd += " -oN {}"
+            nmap_proc_cmd += " -oN {0}".format(file_export)
 
-        nmproc = NmapProcess(target, nmap_proc_cmd)
+        nmproc = NmapProcess(target, nmap_proc_cmd, safe_mode=False)
         rc = nmproc.run()
         if rc != 0:
             raise Exception('EXCEPTION: nmap scan failed: {0}'.format(nmproc.stderr))
