@@ -105,9 +105,9 @@ class RoboNmap(object):
         '''
         target = str(target)
         if portlist:
-            nmap_proc_cmd = "-Pn -sV --version-intensity {0} -p {1}".format(portlist, version_intense)
+            nmap_proc_cmd = "-Pn -sV --version-intensity {0} -p {1}".format(version_intense, portlist)
         else:
-            nmap_proc_cmd = "-Pn -sV --version-intensity {0}".format(portlist)
+            nmap_proc_cmd = "-Pn -sV --version-intensity {0}".format(version_intense)
 
         if file_export:
             nmap_proc_cmd += " -oN {0}".format(file_export)
