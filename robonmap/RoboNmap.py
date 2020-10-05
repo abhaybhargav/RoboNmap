@@ -4,7 +4,7 @@ from robot.api import logger
 
 
 class RoboNmap(object):
-    ROBOT_LIBRARY_SCOPE = 'SUITE'
+    ROBOT_LIBRARY_SCOPE = 'GLOBAL'
 
     def __init__(self):
         '''
