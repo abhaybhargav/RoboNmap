@@ -1,0 +1,16 @@
+# Nmap 7.60 scan initiated Mon Oct  5 13:42:33 2020 as: /usr/bin/nmap -oX - -vvv --stats-every 1s -oN nmap.txt example.com
+Warning: Hostname example.com resolves to 2 IPs. Using 93.184.216.34.
+Nmap scan report for example.com (93.184.216.34)
+Host is up, received syn-ack (0.12s latency).
+Other addresses for example.com (not scanned): 2606:2800:220:1:248:1893:25c8:1946
+Scanned at 2020-10-05 13:42:33 CEST for 8s
+Not shown: 996 filtered ports
+Reason: 996 no-responses
+PORT     STATE  SERVICE  REASON
+80/tcp   open   http     syn-ack
+443/tcp  open   https    syn-ack
+1119/tcp closed bnetgame conn-refused
+1935/tcp closed rtmp     conn-refused
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Mon Oct  5 13:42:41 2020 -- 1 IP address (1 host up) scanned in 8.61 seconds
