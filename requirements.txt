@@ -1,0 +1,2 @@
+python-libnmap==0.7.0
+robotframework==3.0.2
