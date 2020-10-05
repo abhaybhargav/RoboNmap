@@ -2,6 +2,7 @@
 robonmap/*.html
 robonmap/{}
 robonmap/*.xml
+robonmap/*.txt
 dist/
 .pypirc
 robonmap/README.md
